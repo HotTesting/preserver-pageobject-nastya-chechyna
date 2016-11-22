@@ -3,7 +3,7 @@ class DeletePage {
 
         constructor() {
         this.buttonToDelete = $('.grid-container [title~=Delete]')
-       this.pageDeleteNotes = $('#navbar .glyphicon-option-vertical')
+        this.pageDeleteNotes = $('#navbar .glyphicon-option-vertical')
         this.DeleteLink = $(".navbar-right a[href='/preserver/recycle-bin']")
     }
 
