@@ -1,7 +1,7 @@
 //Импорт пейдж обджекта из другого файла
 let NotesPage = require('./pageObjects/NotesPage.js').NotesPage
 let ArchievePage = require('./pageObjects/ArchievePage.js').ArchievePage
-let HomePage = require('./pageObjects/HomePage.js').HomePage
+
 let DeletePage = require('./pageObjects/DeletePage.js').DeletePage
 let AboutPage = require('./pageObjects/AboutPage.js').AboutPage
 
@@ -67,7 +67,7 @@ describe('Preserver tests', function () {
     it('should NOT be created when nothing provided', function () {
 
         notesPage.createNote('', '')
-          browser.sleep(2000)
+        browser.sleep(2000)
         expect(notesPage.getNotes().count()).toBe(0, 'Notes count should be 0')
       
     })
@@ -77,30 +77,28 @@ describe('Preserver tests', function () {
 
 describe('Preserver Achieve tests', function() {
     let archievePage = new ArchievePage()
-    let homePage = new HomePage()
+    let notesPage = new NotesPage()
  
     it('Should be moved to Achieve Notes', function () {
-        homePage.createNotes('Title note for achieving', 'Test description for archieving')
+        notesPage.createNote('Title note for achieving', 'Test description for archieving')
         browser.sleep(2000)
         archievePage.archieveNote()
         browser.sleep(5000)
-    
-    expect(archievePage.getNotes().count()).toBe(1, 'Notes count should be 1 after archieved')
+        expect(archievePage.getNotes().count()).toBe(1, 'Notes count should be 1 after archieved')
     })
 
 })
 
 describe('Preserver Delete tests', function() {
     let deletePage = new DeletePage()
-    let homePage = new HomePage()
+    let notesPage = new NotesPage()
     
     it('Should be removed to recycle bin', function () {
-        homePage.createNotes('Title for deleting', 'Test delete')
+        notesPage.createNote('Title for deleting', 'Test delete')
         browser.sleep(2000)
         deletePage.deleteNote()
         browser.sleep(2000)
-    
-    expect(deletePage.getNotes().count()).toBe(1, 'Notes count in recycle bin should be 1')
+        expect(deletePage.getNotes().count()).toBe(1, 'Notes count in recycle bin should be 1')
     })
 
 })
@@ -110,7 +108,6 @@ describe('Preserver About page', function(){
     it('About page should be open', function(){
         aboutPage.openAbout()
         browser.sleep(2000)
-
-    expect(aboutPage.getAbout().isPresent()).toBe(true)
+        expect(aboutPage.getAbout().isPresent()).toBe(true)
     })
 })
