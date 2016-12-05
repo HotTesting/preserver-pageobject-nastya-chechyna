@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="Preserver Delete tests" timestamp="2016-12-05T16:15:03" hostname="localhost" time="11.75" errors="0" tests="1" skipped="0" failures="0">
+  <testcase classname="Preserver Delete tests" name="Should be removed to recycle bin" time="11.75">
+  </testcase>
+ </testsuite>
+</testsuites>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="Preserver tests" timestamp="2016-12-05T16:14:38" hostname="localhost" time="25.315" errors="0" tests="4" skipped="0" failures="0">
+  <testcase classname="Preserver tests" name="should be created when title and body provided" time="6.399">
+  </testcase>
+  <testcase classname="Preserver tests" name="should be created when only title provided" time="6.325">
+  </testcase>
+  <testcase classname="Preserver tests" name="should be created when only body provided" time="6.389">
+  </testcase>
+  <testcase classname="Preserver tests" name="should NOT be created when nothing provided" time="6.201">
+  </testcase>
+ </testsuite>
+</testsuites>

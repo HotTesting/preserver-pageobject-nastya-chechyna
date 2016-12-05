@@ -8,8 +8,10 @@
   },
   "author": "Oleksandr Khotemskyi <xotabu4@gmail.com> (https://github.com/Xotabu4)",
   "license": "MIT",
-
-  "dependencies":{
+  "dependencies": {
     "protractor": "^4.0.10"
+  },
+  "devDependencies": {
+    "jasmine-reporters": "^2.0.0"
   }
 }
